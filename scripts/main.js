@@ -18,7 +18,7 @@ navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', 
 }));
 
 const typingTarget = document.querySelector('[data-typing]');
-const phrases = ['accessible web experiences.', 'useful software products.', 'clean, scalable solutions.'];
+const phrases = ['AI-first product experiences.', 'reliable travel journeys.', 'products grounded in user insight.'];
 let phraseIndex = 0;
 let characterIndex = 0;
 let deleting = false;
@@ -47,9 +47,9 @@ if (typingTarget && !window.matchMedia('(prefers-reduced-motion: reduce)').match
 }
 
 const focusContent = {
-  frontend: ['Frontend development', 'Responsive, accessible interfaces with purposeful interactions and clear component systems.'],
-  backend: ['Backend & API development', 'Dependable services, thoughtful data models, integrations, and secure application flows.'],
-  data: ['Data & AI workflows', 'Practical automation and analysis that turn unstructured information into useful outcomes.']
+  frontend: ['Product strategy & execution', 'PRDs, roadmaps, prioritization, user journeys, and cross-functional delivery tied to measurable outcomes.'],
+  backend: ['User & market research', 'Interviews, competitor analysis, workflow mapping, and experiments that clarify what to build and why.'],
+  data: ['Data & AI products', 'AI-first workflows and product analytics that reduce manual effort and improve user decisions.']
 };
 
 document.querySelectorAll('[data-focus]').forEach((button) => button.addEventListener('click', () => {

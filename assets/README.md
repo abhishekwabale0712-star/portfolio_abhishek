@@ -1,8 +1,7 @@
 # Portfolio assets
 
-Add your files here before publishing:
+Portfolio files:
 
-- `Abhishek-Wabale-Resume.pdf`
+- `Abhishek-Wabale-Resume.pdf` - downloadable CV
 - A professional profile photograph
 - Real screenshots for each portfolio project
-

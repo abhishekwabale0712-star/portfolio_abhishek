@@ -6,14 +6,12 @@ A responsive static portfolio built with HTML, CSS, and JavaScript. It is design
 
 Open `index.html` with the VS Code Live Server extension.
 
-## Personalize before publishing
+## Optional next improvements
 
-1. Replace all sample project and timeline content in `index.html`.
-2. Replace the `AW` portrait placeholder with your photograph.
-3. Add your résumé as `assets/Abhishek-Wabale-Resume.pdf`.
-4. Update the email and LinkedIn links.
-5. Duplicate `case-studies/project-one/` for each real project.
-6. Replace case-study placeholders with real evidence, screenshots, and results.
+1. Replace the `AW` portrait placeholder with a professional photograph.
+2. Add shareable product screenshots to the three case studies.
+3. Add the correct LinkedIn profile URL once available.
+4. Review the CV-derived wording and metrics before public promotion.
 
 ## Deploy
 
