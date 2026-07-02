@@ -3,155 +3,429 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Abhishek Wabale — product professional building AI-first B2B SaaS and B2C travel products.">
-  <meta name="theme-color" content="#f6f4ef">
+  <meta name="theme-color" content="#faf9f7">
+  <meta name="description" content="Abhishek Wabale — Product professional building AI-first B2B SaaS and B2C travel products.">
   <title>Abhishek Wabale — Product Professional</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <script src="scripts/main.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="progress" aria-hidden="true"></div>
 
-  <header class="site-header" data-header>
-    <nav class="nav shell" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Abhishek Wabale, home">Abhishek<span>.</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-menu-toggle>
-        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
-      </button>
-      <div class="nav-links" id="nav-links" data-nav-links>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact" class="nav-cta">Contact</a>
-      </div>
-    </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <button class="mobile-close" type="button" id="mobileClose" aria-label="Close menu">×</button>
+    <a href="#about" data-close-mobile>About</a>
+    <a href="#work" data-close-mobile>Work</a>
+    <a href="#experience" data-close-mobile>Experience</a>
+    <a href="#life" data-close-mobile>Life</a>
+    <a href="#contact" data-close-mobile>Contact</a>
+  </nav>
+
+  <header class="site-nav" id="siteNav">
+    <a href="#home" class="nav-logo">Abhishek<span>.</span></a>
+    <div class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#life">Life</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <main id="main">
-    <section class="hero shell" id="home">
-      <div class="hero-copy reveal">
-        <div class="availability"><span></span> Open to product opportunities</div>
-        <p class="eyebrow">Product professional</p>
-        <h1>Abhishek <em>Wabale</em></h1>
-        <p class="typing-line">I build <span data-typing></span><span class="cursor" aria-hidden="true"></span></p>
-        <p class="hero-intro">I identify workflow bottlenecks, understand user behaviour, and build AI-first products that improve engagement, reliability, and user experience.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#work">See my work <span>↘</span></a>
-          <a class="button button-light" href="assets/Abhishek-Wabale-Resume.pdf" download>Download résumé <span>↓</span></a>
-        </div>
-        <a class="text-link" href="#contact">Contact me <span>→</span></a>
-      </div>
+  <main id="home">
+    <section class="hero">
+      <div class="blob blob-one" data-speed=".22"></div>
+      <div class="blob blob-two" data-speed=".14"></div>
+      <div class="blob blob-three" data-speed=".30"></div>
 
-      <aside class="focus-card reveal" aria-label="Professional focus">
-        <p class="eyebrow">What I bring</p>
-        <h2>Product thinking with technical depth</h2>
-        <p>I connect customer problems, business outcomes, data, and delivery—from discovery through launch and iteration.</p>
-        <div class="focus-tabs" role="tablist" aria-label="Areas of focus">
-          <button class="active" type="button" role="tab" aria-selected="true" data-focus="frontend">Product</button>
-          <button type="button" role="tab" aria-selected="false" data-focus="backend">Research</button>
-          <button type="button" role="tab" aria-selected="false" data-focus="data">Data & AI</button>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal" data-speed=".88">
+          <div class="hero-badge"><span></span>Open to product opportunities</div>
+          <p class="hero-role">Product Professional</p>
+          <h1>Abhishek<br><em>Wabale</em></h1>
+          <p class="typing">I build <span id="typedText"></span></p>
+          <p class="hero-sub">I identify workflow bottlenecks, understand user behaviour, and build AI-first products that improve engagement, reliability, and user experience across B2B SaaS and B2C travel tech.</p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary magnetic">See my work <span>→</span></a>
+            <a href="assets/Abhishek-Wabale-Resume.pdf" class="btn btn-outline magnetic" target="_blank" rel="noopener">Download resume <span>↓</span></a>
+            <a href="#contact" class="btn btn-ghost magnetic">Contact me <span>→</span></a>
+          </div>
         </div>
-        <div class="focus-detail" data-focus-detail>
-          <strong>Product strategy & execution</strong>
-          <p>PRDs, roadmaps, prioritization, user journeys, and cross-functional delivery tied to measurable outcomes.</p>
-        </div>
-        <div class="tag-row"><span>AI Products</span><span>B2B SaaS</span><span>Travel Tech</span><span>Analytics</span></div>
-      </aside>
+
+        <aside class="interest-card reveal" data-speed=".76" aria-label="What Abhishek is looking for">
+          <div class="card-bar">I'm looking for</div>
+          <h2>B2B / B2C Product Manager roles</h2>
+          <p>Strong focus on AI-first products, workflow automation, user experience, data-informed decisions, and cross-functional delivery.</p>
+          <div class="vertical-tabs">
+            <button class="active" type="button" data-interest="product">Product strategy</button>
+            <button type="button" data-interest="ux">User experience</button>
+            <button type="button" data-interest="data">Data & experimentation</button>
+            <button type="button" data-interest="ai">AI / automation</button>
+          </div>
+          <div class="interest-result" id="interestResult">
+            <strong>Product strategy</strong>
+            <span>I turn business goals and customer problems into roadmaps, PRDs, priorities, and product releases.</span>
+          </div>
+          <div class="float-tags" aria-hidden="true">
+            <span>AI Product</span><span>B2B SaaS</span><span>Travel Tech</span><span>PRD</span><span>SQL</span>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <section class="section shell" id="about">
-      <div class="section-label reveal"><span>01</span> About me</div>
-      <div class="about-grid">
-        <div class="portrait-card reveal" role="img" aria-label="Add a professional photograph of Abhishek here">
-          <span>AW</span>
-          <small>Replace with your photo</small>
-        </div>
-        <div class="about-copy reveal">
-          <h2>I connect <em>user needs</em>, business goals, and technology.</h2>
-          <p>I’m a product professional with 2+ years across B2B SaaS and B2C travel tech. My experience spans AI-powered travel workflows, booking and payment journeys, EdTech personalization, professional networking, and construction technology.</p>
-          <p class="edit-note">I enjoy finding the friction hidden inside a workflow, turning it into a clear product opportunity, and partnering with engineering and stakeholders to ship an outcome users can feel.</p>
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="label">About me</p>
+          <div class="about-title-row">
+            <div class="avatar-placeholder" aria-label="Add Abhishek's professional photo here">AW</div>
+            <h2 class="section-title">I connect users, data, and product execution</h2>
+          </div>
+          <div class="about-text">
+            <p>I'm a product professional with 2+ years across B2B SaaS and B2C travel tech. I have worked on AI-powered flight quotes, supplier API integrations, payment journeys, professional networking products, EdTech strategy, and business workflow automation.</p>
+            <p>I like products where the user problem is hidden inside messy operations: too much manual effort, unclear information, friction in checkout, or teams making decisions without enough signal.</p>
+          </div>
           <div class="stats">
             <div><strong>2+</strong><span>Years in product</span></div>
             <div><strong>40%</strong><span>Manual effort reduced</span></div>
             <div><strong>15+</strong><span>User interviews</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="capability-grid">
-        <article class="capability reveal"><span>01</span><h3>Product strategy</h3><p>Turning business goals and customer problems into roadmaps, PRDs, priorities, and focused releases.</p><div class="tag-row"><span>Roadmaps</span><span>PRDs</span><span>Prioritization</span></div></article>
-        <article class="capability reveal"><span>02</span><h3>User discovery</h3><p>Using interviews, journey mapping, market research, and competitor analysis to find the right problem.</p><div class="tag-row"><span>Research</span><span>Journeys</span><span>Wireframes</span></div></article>
-        <article class="capability reveal"><span>03</span><h3>AI & analytics</h3><p>Designing AI-first workflows and measuring product behaviour with data rather than assumptions.</p><div class="tag-row"><span>Python</span><span>SQL</span><span>Amplitude</span></div></article>
-        <article class="capability reveal"><span>04</span><h3>Product delivery</h3><p>Aligning stakeholders and engineering around clear requirements, sprint execution, and user outcomes.</p><div class="tag-row"><span>APIs</span><span>Postman</span><span>Figma</span></div></article>
-      </div>
-    </section>
-
-    <section class="section process-section">
-      <div class="shell">
-        <div class="section-label reveal"><span>02</span> How I work</div>
-        <div class="section-heading reveal"><h2>A clear path from <em>problem</em> to product.</h2><p>Good software starts before the first line of code.</p></div>
-        <div class="process-grid">
-          <article class="process-card reveal"><span>01</span><h3>Understand</h3><p>Clarify the user, goal, constraints, and definition of success.</p></article>
-          <article class="process-card reveal"><span>02</span><h3>Design</h3><p>Map the flow, choose the right architecture, and reduce uncertainty early.</p></article>
-          <article class="process-card reveal"><span>03</span><h3>Build</h3><p>Develop in small, testable increments with quality and maintainability in mind.</p></article>
-          <article class="process-card reveal"><span>04</span><h3>Improve</h3><p>Measure outcomes, learn from feedback, and iterate where it matters.</p></article>
+        <div class="capability-grid reveal">
+          <article class="capability sage" data-num="01">
+            <div class="cap-icon">▦</div>
+            <h3>Product ownership</h3>
+            <p>PRDs, roadmap planning, prioritization, stakeholder alignment, and release execution.</p>
+            <div class="mini-tags"><span>Roadmaps</span><span>PRDs</span><span>User stories</span></div>
+          </article>
+          <article class="capability rose" data-num="02">
+            <div class="cap-icon">◌</div>
+            <h3>User research & UX</h3>
+            <p>Interviews, journeys, wireframes, competitor analysis, and usability improvements.</p>
+            <div class="mini-tags"><span>Figma</span><span>Miro</span><span>Whimsical</span></div>
+          </article>
+          <article class="capability sand" data-num="03">
+            <div class="cap-icon">✦</div>
+            <h3>AI-first workflows</h3>
+            <p>AI-assisted quoting, EdTech personalization, automation, and productivity-focused systems.</p>
+            <div class="mini-tags"><span>Vercel AI SDK</span><span>APIs</span><span>Prompting</span></div>
+          </article>
+          <article class="capability lavender" data-num="04">
+            <div class="cap-icon">⌁</div>
+            <h3>Data-informed decisions</h3>
+            <p>Using product analytics and experiments to identify friction and improve outcomes.</p>
+            <div class="mini-tags"><span>SQL</span><span>Python</span><span>Amplitude</span></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section shell" id="work">
-      <div class="section-label reveal"><span>03</span> Selected work</div>
-      <div class="section-heading reveal"><h2>Products with a <em>measurable</em> outcome.</h2><p>Selected work across travel, AI, SaaS, and professional networking.</p></div>
-      <div class="filters reveal" aria-label="Filter projects">
-        <button class="active" type="button" data-filter="all">All</button>
-        <button type="button" data-filter="travel">Travel tech</button>
-        <button type="button" data-filter="saas">B2B SaaS</button>
-        <button type="button" data-filter="data">AI & Data</button>
-      </div>
+    <section class="section work-section" id="work">
+      <div class="container">
+        <div class="reveal">
+          <p class="label">How I work</p>
+          <h2 class="section-title">How I work in product</h2>
+        </div>
 
-      <div class="projects">
-        <article class="project reveal" data-category="travel data">
-          <div class="project-visual visual-one"><span>AI flight workflow</span><div class="mock-browser"><i></i><i></i><i></i><div class="mock-content"><b></b><b></b><b></b></div></div></div>
-          <div class="project-copy"><div class="tag-row"><span>Travel tech</span><span>AI product</span></div><h3>AI-powered flight quotes & booking reliability</h3><p>Improved the flight-booking journey through AI-assisted quoting, supplier integrations, clearer baggage information, and reliable fallbacks.</p><dl><div><dt>My role</dt><dd>Product discovery, requirements, API coordination, and delivery</dd></div><div><dt>Impact</dt><dd>40% less manual effort and 12% more successful bookings</dd></div></dl><div class="tag-row"><span>Vercel AI SDK</span><span>Supplier APIs</span><span>Travelxp</span></div><a class="project-link" href="case-studies/project-one/">Read full case study <span>↗</span></a></div>
-        </article>
-        <article class="project reveal" data-category="saas data">
-          <div class="project-visual visual-two"><span>Professional networking</span><div class="phone"><div></div><b></b><b></b><b></b></div></div>
-          <div class="project-copy"><div class="tag-row"><span>B2B SaaS</span><span>AI networking</span></div><h3>Nexalink professional networking suite</h3><p>Owned the roadmap for Digital Business Card, Personal CRM, and Smart Scanner, then used research and experiments to improve usability.</p><dl><div><dt>My role</dt><dd>Roadmap, user research, MVP definition, A/B testing, and GTM</dd></div><div><dt>Impact</dt><dd>30% higher engagement and 15% wider market reach</dd></div></dl><div class="tag-row"><span>User research</span><span>A/B testing</span><span>GTM</span></div><a class="project-link" href="case-studies/project-two/">Read full case study <span>↗</span></a></div>
-        </article>
-        <article class="project reveal" data-category="saas data">
-          <div class="project-visual visual-three"><span>Business operations</span><div class="data-art"><i></i><i></i><i></i><i></i><i></i></div></div>
-          <div class="project-copy"><div class="tag-row"><span>Workflow automation</span><span>SaaS</span></div><h3>Business management systems</h3><p>Built tailored operational systems for interior and pharmacy businesses to simplify billing, inventory, and repetitive work.</p><dl><div><dt>My role</dt><dd>Workflow discovery, product definition, prioritization, and delivery</dd></div><div><dt>Impact</dt><dd>40% less manual effort, 50% faster billing, 30% better inventory accuracy</dd></div></dl><div class="tag-row"><span>Product strategy</span><span>Automation</span><span>Operations</span></div><a class="project-link" href="case-studies/project-three/">Read full case study <span>↗</span></a></div>
-        </article>
+        <div class="approach-grid reveal">
+          <button class="approach-card active" type="button" data-approach="pm">
+            <span class="approach-num">01</span>
+            <h3>Start with the problem</h3>
+            <p>Define the user, context, constraint, and business outcome before jumping to features.</p>
+          </button>
+          <button class="approach-card" type="button" data-approach="ux">
+            <span class="approach-num">02</span>
+            <h3>Talk to users</h3>
+            <p>Use interviews, journey mapping, and prototypes to understand what people are really trying to do.</p>
+          </button>
+          <button class="approach-card" type="button" data-approach="data">
+            <span class="approach-num">03</span>
+            <h3>Measure, then decide</h3>
+            <p>Translate product questions into metrics, funnels, experiments, and clear decisions.</p>
+          </button>
+          <button class="approach-card" type="button" data-approach="ai">
+            <span class="approach-num">04</span>
+            <h3>Automate the repetitive</h3>
+            <p>Find workflows that should not stay manual and design AI or system-led improvements.</p>
+          </button>
+        </div>
+
+        <div class="filters reveal" aria-label="Case study filters">
+          <button class="active" type="button" data-filter="all">All</button>
+          <button type="button" data-filter="pm">Product Management</button>
+          <button type="button" data-filter="ux">User Experience</button>
+          <button type="button" data-filter="data">Data-driven</button>
+          <button type="button" data-filter="ai">AI & Automation</button>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card has-preview reveal" data-cats="pm ai data" style="--order:1">
+            <div class="case-main">
+              <div class="case-cats"><span>Product Management</span><span>AI & Automation</span></div>
+              <h3><a href="case-studies/project-one/">AI-powered flight quotes for travel booking</a></h3>
+              <div class="case-row">
+                <div><label>Problem</label><p>Flight quote generation required manual effort and slowed down the customer response cycle.</p></div>
+                <div><label>My role</label><p>Defined requirements, collaborated with engineering, and shaped the AI-assisted workflow using Vercel AI SDK.</p></div>
+              </div>
+              <div class="impact"><label>Impact</label><ul><li>Reduced manual effort by 40%</li><li>Improved booking team speed</li><li>Created a repeatable AI-first workflow</li></ul></div>
+              <div class="case-tools"><span>Vercel AI SDK</span><span>PRD</span><span>Travelxp</span><span>Workflow automation</span></div>
+            </div>
+            <div class="product-preview laptop">
+              <div class="preview-kicker">Product glimpse</div>
+              <div class="browser-art"><i></i><i></i><i></i><div class="quote-card"><b></b><b></b><b></b></div></div>
+              <p><strong>Quote assistant</strong> Structured AI output for faster flight quotation.</p>
+            </div>
+          </article>
+
+          <article class="case-card has-preview reveal" data-cats="pm ux data" style="--order:2">
+            <div class="case-main">
+              <div class="case-cats"><span>Product Management</span><span>User Experience</span></div>
+              <h3><a href="case-studies/project-one/">Flight booking reliability through supplier APIs</a></h3>
+              <div class="case-row">
+                <div><label>Problem</label><p>Booking success depended on supplier reliability and a smoother API-backed booking path.</p></div>
+                <div><label>My role</label><p>Coordinated E-Trav API integration, clarified edge cases, and aligned teams on success criteria.</p></div>
+              </div>
+              <div class="impact"><label>Impact</label><ul><li>12% increase in successful bookings</li><li>More reliable supplier-backed flow</li><li>Cleaner coordination between product and engineering</li></ul></div>
+              <div class="case-tools"><span>Supplier APIs</span><span>Postman</span><span>Booking UX</span><span>Stakeholders</span></div>
+            </div>
+            <div class="product-preview route-map">
+              <div class="preview-kicker">Product glimpse</div>
+              <div class="route-art"><span></span><span></span><span></span><span></span></div>
+              <p><strong>API booking path</strong> Supplier integration mapped into a clearer user journey.</p>
+            </div>
+          </article>
+
+          <article class="case-card has-preview reveal" data-cats="ux data pm" style="--order:3">
+            <div class="case-main">
+              <div class="case-cats"><span>User Experience</span><span>Data-driven</span></div>
+              <h3><a href="case-studies/project-one/">Baggage visibility and EMI payment improvements</a></h3>
+              <div class="case-row">
+                <div><label>Problem</label><p>Users dropped off when baggage details or payment flexibility were unclear during flight booking.</p></div>
+                <div><label>My role</label><p>Improved baggage visibility and helped integrate JusPay ExpressCheckout EMI for international bookings.</p></div>
+              </div>
+              <div class="impact"><label>Impact</label><ul><li>20% reduction in baggage-related drop-offs</li><li>15% increase in international bookings</li><li>More transparent checkout experience</li></ul></div>
+              <div class="case-tools"><span>Checkout UX</span><span>JusPay</span><span>Funnel thinking</span><span>Payments</span></div>
+            </div>
+            <div class="product-preview phone-preview">
+              <div class="preview-kicker">Product glimpse</div>
+              <div class="phone-art"><b></b><span></span><span></span><span></span></div>
+              <p><strong>Mobile checkout</strong> Clear baggage and payment options at decision time.</p>
+            </div>
+          </article>
+
+          <article class="case-card has-preview reveal" data-cats="pm ux data" style="--order:4">
+            <div class="case-main">
+              <div class="case-cats"><span>B2B SaaS</span><span>User Experience</span></div>
+              <h3><a href="case-studies/project-two/">Nexalink professional networking suite</a></h3>
+              <div class="case-row">
+                <div><label>Problem</label><p>Professionals needed a smoother way to create digital identity, scan contacts, and manage follow-ups.</p></div>
+                <div><label>My role</label><p>Owned roadmap and research for Digital Business Card, Personal CRM, and Smart Scanner MVPs.</p></div>
+              </div>
+              <div class="impact"><label>Impact</label><ul><li>30% engagement increase</li><li>15+ user interviews</li><li>15% market reach expansion within 3 months</li></ul></div>
+              <div class="case-tools"><span>Roadmap</span><span>A/B testing</span><span>User interviews</span><span>GTM</span></div>
+            </div>
+            <div class="product-preview phone-preview">
+              <div class="preview-kicker">Product glimpse</div>
+              <div class="profile-card"><div>AW</div><b></b><span></span><span></span></div>
+              <p><strong>Networking flow</strong> Digital profile, scanning, and CRM actions in one suite.</p>
+            </div>
+          </article>
+
+          <article class="case-card has-preview reveal" data-cats="ai pm data" style="--order:5">
+            <div class="case-main">
+              <div class="case-cats"><span>AI & Automation</span><span>Product Strategy</span></div>
+              <h3><a href="case-studies/project-three/">AI-powered EdTech product strategy</a></h3>
+              <div class="case-row">
+                <div><label>Problem</label><p>The product needed a clearer AI-first direction for personalized learning and scalable learning workflows.</p></div>
+                <div><label>My role</label><p>Built product strategy, roadmap direction, user flows, and prioritization logic for the EdTech concept.</p></div>
+              </div>
+              <div class="impact"><label>Impact</label><ul><li>Clearer roadmap for AI-assisted learning</li><li>Sharper MVP prioritization</li><li>Better alignment between business and engineering</li></ul></div>
+              <div class="case-tools"><span>AI EdTech</span><span>Strategy</span><span>User flows</span><span>Prioritization</span></div>
+            </div>
+            <div class="product-preview data-preview">
+              <div class="preview-kicker">Product glimpse</div>
+              <div class="learning-art"><i></i><i></i><i></i><i></i><i></i></div>
+              <p><strong>Learning path</strong> AI-assisted recommendations shaped into a product roadmap.</p>
+            </div>
+          </article>
+
+          <article class="case-card has-preview reveal" data-cats="ai data pm" style="--order:6">
+            <div class="case-main">
+              <div class="case-cats"><span>Workflow Automation</span><span>SaaS</span></div>
+              <h3><a href="case-studies/project-three/">Business management systems for operations</a></h3>
+              <div class="case-row">
+                <div><label>Problem</label><p>Interior and pharmacy businesses were losing time on billing, inventory, and repetitive operational work.</p></div>
+                <div><label>My role</label><p>Mapped workflows, defined system requirements, prioritized releases, and collaborated with engineering.</p></div>
+              </div>
+              <div class="impact"><label>Impact</label><ul><li>40% less manual effort</li><li>50% faster billing</li><li>30% better inventory accuracy</li></ul></div>
+              <div class="case-tools"><span>Operations</span><span>Automation</span><span>Inventory</span><span>Billing</span></div>
+            </div>
+            <div class="product-preview data-preview">
+              <div class="preview-kicker">Product glimpse</div>
+              <div class="dashboard-art"><i></i><i></i><i></i><i></i></div>
+              <p><strong>Operations dashboard</strong> Billing and inventory made visible in one workflow.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section experience-section" id="experience">
-      <div class="shell">
-        <div class="section-label reveal"><span>04</span> My journey</div>
-        <div class="section-heading reveal"><h2>Experience & <em>education</em>.</h2><p>A journey across travel tech, AI products, SaaS, and technology management.</p></div>
-        <div class="timeline-filters reveal"><button class="active" type="button" data-timeline-filter="all">All</button><button type="button" data-timeline-filter="work">Work</button><button type="button" data-timeline-filter="education">Education</button></div>
-        <div class="timeline">
-          <article class="timeline-item reveal" data-timeline="work"><div class="timeline-year">2025–Now</div><div><span class="timeline-type">Work</span><h3>Product Executive (Associate Product Manager)</h3><p class="timeline-company">Travelxp · Mumbai, India</p><p>Leading AI-assisted flight workflows, supplier integrations, booking-reliability improvements, flexible payments, and automated ticket delivery for a global B2C travel platform.</p><div class="tag-row"><span>AI Product</span><span>Travel APIs</span><span>Payments</span><span>Booking UX</span></div></div></article>
-          <article class="timeline-item reveal" data-timeline="work"><div class="timeline-year">2025</div><div><span class="timeline-type">Work</span><h3>Product Consultant (Part-time)</h3><p class="timeline-company">BitZetta · Remote</p><p>Contributed to an AI-powered EdTech strategy and built operational systems that improved billing, inventory accuracy, and manual workflows for small businesses.</p><div class="tag-row"><span>AI EdTech</span><span>Product Strategy</span><span>Automation</span></div></div></article>
-          <article class="timeline-item reveal" data-timeline="work"><div class="timeline-year">2024</div><div><span class="timeline-type">Work</span><h3>Product Management Intern</h3><p class="timeline-company">WebMobi · Remote, Berlin</p><p>Owned roadmap and research initiatives for Nexalink, an AI-powered professional networking product, and supported its go-to-market execution.</p><div class="tag-row"><span>Roadmapping</span><span>User Research</span><span>A/B Testing</span><span>GTM</span></div></div></article>
-          <article class="timeline-item reveal" data-timeline="work"><div class="timeline-year">2022</div><div><span class="timeline-type">Work</span><h3>Product Management Working Student</h3><p class="timeline-company">Tenera · Berlin, Germany</p><p>Researched contractor workflows, supported backlog and sprint execution, and led a multilingual feature initiative for a B2B construction-tech platform.</p><div class="tag-row"><span>B2B SaaS</span><span>Workflow Research</span><span>Prioritization</span></div></div></article>
-          <article class="timeline-item reveal" data-timeline="education"><div class="timeline-year">2023</div><div><span class="timeline-type">Education</span><h3>MSc, International Technology Transfer Management</h3><p class="timeline-company">bbw Hochschule University of Applied Sciences · Berlin, Germany</p><div class="tag-row"><span>Technology Management</span><span>International Business</span></div></div></article>
-          <article class="timeline-item reveal" data-timeline="education"><div class="timeline-year">2019</div><div><span class="timeline-type">Education</span><h3>BE, Mechanical Engineering</h3><p class="timeline-company">Savitribai Phule Pune University</p><div class="tag-row"><span>Engineering</span><span>Problem Solving</span></div></div></article>
+      <div class="container">
+        <div class="reveal">
+          <p class="label">How I got here</p>
+          <h2 class="section-title">Experience & education</h2>
+        </div>
+        <div class="timeline-filters reveal">
+          <button class="active" type="button" data-timeline-filter="all">All</button>
+          <button type="button" data-timeline-filter="work">Work</button>
+          <button type="button" data-timeline-filter="education">Education</button>
+          <button type="button" data-timeline-filter="certification">Certifications</button>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="timeline-item" data-timeline="work">
+            <div class="timeline-year">2025–Now</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Product Executive / Associate Product Manager</h3>
+              <p class="company">Travelxp · Mumbai</p>
+              <p>Leading AI-powered flight quote workflows, E-Trav supplier API integration, baggage visibility improvements, EMI payment integration, and automated PDF ticket generation.</p>
+              <button class="show-more" type="button">Show details</button>
+              <ul class="timeline-details">
+                <li>Reduced manual quote-generation effort by 40% using AI-assisted workflows.</li>
+                <li>Increased successful bookings by 12% through supplier API integration.</li>
+                <li>Reduced support requests by 35% through automated ticket PDF generation.</li>
+              </ul>
+              <div class="mini-tags"><span>Travel APIs</span><span>AI Product</span><span>Payments</span><span>Booking UX</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-timeline="work">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Product Consultant</h3>
+              <p class="company">BitZetta · Remote</p>
+              <p>Built AI-powered EdTech strategy and business management systems for interior and pharmacy operations.</p>
+              <button class="show-more" type="button">Show details</button>
+              <ul class="timeline-details">
+                <li>Defined product strategy, user flows, and prioritization for an AI-first EdTech concept.</li>
+                <li>Improved billing speed, inventory accuracy, and reduced manual operational effort.</li>
+              </ul>
+              <div class="mini-tags"><span>AI EdTech</span><span>Automation</span><span>Product Strategy</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-timeline="work">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Product Management Intern</h3>
+              <p class="company">WebMobi · Remote / Berlin</p>
+              <p>Owned roadmap and research initiatives for Nexalink, including Digital Business Card, Personal CRM, Smart Scanner, Email Signature, and QR Code Generator MVPs.</p>
+              <button class="show-more" type="button">Show details</button>
+              <ul class="timeline-details">
+                <li>Conducted 15+ user interviews and competitor benchmarking.</li>
+                <li>Improved engagement by 30% through usability improvements and A/B testing.</li>
+                <li>Supported GTM strategy that expanded market reach by 15% within 3 months.</li>
+              </ul>
+              <div class="mini-tags"><span>B2B SaaS</span><span>Research</span><span>A/B Testing</span><span>GTM</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-timeline="work">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Product Management Working Student</h3>
+              <p class="company">Tenera · Berlin</p>
+              <p>Supported a B2B construction-tech platform through workflow research, backlog prioritization, sprint execution, and a translation feature initiative.</p>
+              <button class="show-more" type="button">Show details</button>
+              <ul class="timeline-details">
+                <li>Improved adoption by 10% through contractor workflow research.</li>
+                <li>Increased feature adoption in new markets by 12% with translation-focused improvements.</li>
+              </ul>
+              <div class="mini-tags"><span>Construction Tech</span><span>B2B SaaS</span><span>Backlog</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-timeline="education">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>MSc, International Technology Transfer Management</h3>
+              <p class="company">bbw Hochschule University of Applied Sciences · Berlin</p>
+              <div class="mini-tags"><span>Technology Management</span><span>International Business</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-timeline="education">
+            <div class="timeline-year">2019</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>BE, Mechanical Engineering</h3>
+              <p class="company">Savitribai Phule Pune University</p>
+              <div class="mini-tags"><span>Engineering</span><span>Problem Solving</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-timeline="certification">
+            <div class="timeline-year">Certs</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Product & AI certifications</h3>
+              <p>CSPO, Product Strategy, AI for Product Managers, Software Product Management, and Product Management Launchpad.</p>
+              <div class="mini-tags"><span>CSPO</span><span>Product School</span><span>Pendo.io</span><span>University of Alberta</span><span>Airtribe</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="contact section" id="contact">
-        <div class="shell contact-grid">
-        <div class="reveal"><div class="section-label"><span>05</span> Contact</div><h2>Let’s build something <em>worth using</em>.</h2><p>Looking for a product professional who connects user needs, business goals, AI, and execution? Let’s talk.</p><a class="button button-light" href="mailto:abhishekkwabale@gmail.com">abhishekkwabale@gmail.com <span>↗</span></a></div>
-        <div class="contact-links reveal"><a href="https://github.com/abhishekwabale0712-star" target="_blank" rel="noreferrer"><span>GitHub</span><b>View my profile ↗</b></a><a href="mailto:abhishekkwabale@gmail.com"><span>Email</span><b>Start a conversation ↗</b></a><a href="assets/Abhishek-Wabale-Resume.pdf" download><span>Résumé</span><b>Download PDF ↓</b></a></div>
+    <section class="section life-section" id="life">
+      <div class="container life-grid">
+        <div class="reveal">
+          <p class="label">Beyond the PM</p>
+          <h2 class="section-title">I like building useful systems — and learning from real people</h2>
+          <p>Outside formal product work, I keep studying how AI, automation, and user behaviour can make everyday workflows simpler. This section is ready for your personal story: writing, travel, mentoring, content, hobbies, or anything you want recruiters to remember.</p>
+          <a class="social-pill" href="https://github.com/abhishekwabale0712-star" target="_blank" rel="noopener">GitHub · abhishekwabale0712-star</a>
+        </div>
+
+        <div class="album-board reveal" aria-label="Personal board placeholders">
+          <div class="paper-shape"></div>
+          <article class="album-card one"><div class="album-art">AI</div><span>AI × Product</span><strong>Learning how automation changes workflows</strong></article>
+          <article class="album-card two"><div class="album-art">UX</div><span>User behaviour</span><strong>Turning observations into better flows</strong></article>
+          <article class="album-card three"><div class="album-art">PM</div><span>Career growth</span><strong>Building products with clearer thinking</strong></article>
+          <article class="album-card four"><div class="album-art">⚡</div><span>Systems</span><strong>Small tools, better habits, less manual work</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="label">Contact</p>
+          <h2 class="contact-title">Let's build something <em>worth using</em></h2>
+          <p>Looking for a product professional who connects user needs, business goals, AI, data, and execution? Let's talk.</p>
+        </div>
+        <div class="contact-links reveal">
+          <a href="mailto:abhishekkwabale@gmail.com"><span>Email</span><strong>abhishekkwabale@gmail.com</strong></a>
+          <a href="assets/Abhishek-Wabale-Resume.pdf" target="_blank" rel="noopener"><span>Resume</span><strong>Download PDF</strong></a>
+          <a href="https://github.com/abhishekwabale0712-star" target="_blank" rel="noopener"><span>GitHub</span><strong>View profile</strong></a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="shell"><span>© <span data-year></span> Abhishek Wabale</span><a href="#home">Back to top ↑</a></div></footer>
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Abhishek Wabale · Product Professional</span>
+      <div><a href="mailto:abhishekkwabale@gmail.com">Email</a><a href="#home">Back to top ↑</a></div>
+    </div>
+  </footer>
 </body>
 </html>
