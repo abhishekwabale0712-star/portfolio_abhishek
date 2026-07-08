@@ -3,36 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Abhishek Wabale improved AI-assisted flight quoting and booking reliability at Travelxp.">
-  <title>AI-powered flight booking — Abhishek Wabale</title>
+  <title>AI-powered flight quotes - Abhishek Wabale</title>
+  <meta name="description" content="A product case study on AI-assisted flight quotes, booking reliability, payments, and ticket fulfilment.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles/case-study.css">
 </head>
-<body>
-  <header class="case-nav"><div class="shell"><a href="../../index.html#work">← Back to portfolio</a><a href="../../index.html#contact">Contact me</a></div></header>
-  <main>
-    <section class="case-hero shell">
-      <p class="eyebrow">Case study 01</p>
-      <h1>AI-powered flight quotes & booking reliability</h1>
-      <p class="case-lead">A set of product improvements that reduced manual quoting effort by 40%, increased successful bookings by 12%, and made checkout more trustworthy.</p>
-      <div class="case-tags"><span>Associate Product Manager</span><span>Vercel AI SDK</span><span>Travel tech</span></div>
-    </section>
-    <div class="case-layout shell">
-      <article class="case-content">
-        <section id="problem"><p class="section-number">01</p><h2>The problem</h2><p>Flight quoting involved avoidable manual work, while supplier inconsistencies and missing baggage information created uncertainty during booking. Users needed reliable inventory, transparent responses, and more flexible payment options.</p><div class="insight"><span>Core challenge</span><strong>Make a complex supplier-driven booking flow feel clear and dependable to the traveller.</strong></div></section>
-        <section id="discovery"><p class="section-number">02</p><h2>Research and discovery</h2><p>I examined the workflow bottlenecks behind manual quotes and the points where incomplete baggage or supplier responses caused drop-offs. The opportunity was broader than adding AI: the entire flow needed better inputs, structured responses, and safe fallbacks.</p><blockquote>Automation creates value only when the underlying booking response is trustworthy.</blockquote></section>
-        <section id="role"><p class="section-number">03</p><h2>What I did</h2><div class="step"><span>01</span><div><h3>Shaped the AI quoting workflow</h3><p>Led development of an AI-powered Flight Quotes feature using the Vercel AI SDK to reduce repetitive manual effort.</p></div></div><div class="step"><span>02</span><div><h3>Improved supplier reliability</h3><p>Coordinated E-Trav API integrations and introduced structured responses and fallbacks for incomplete booking data.</p></div></div><div class="step"><span>03</span><div><h3>Strengthened checkout and fulfilment</h3><p>Added EMI payments through JusPay ExpressCheckout and automated PDF ticket generation and delivery.</p></div></div></section>
-        <section id="solution"><p class="section-number">04</p><h2>What we shipped</h2><p>The resulting journey combined AI-assisted quoting, more reliable inventory, clearer baggage visibility, flexible international payment options, and automatic post-booking ticket delivery.</p><div class="case-image"><span>Product visuals can be added when shareable screenshots are available</span></div></section>
-        <section id="impact"><p class="section-number">05</p><h2>Impact</h2><ul class="impact-list"><li>Reduced manual flight-quote effort by 40%.</li><li>Contributed to a 12% increase in successful bookings.</li><li>Reduced booking drop-offs by 20% through clearer baggage responses and fallbacks.</li><li>Contributed to a 15% increase in international bookings through EMI payments.</li><li>Reduced ticket-PDF support requests by 35%.</li></ul></section>
-        <section id="learning"><p class="section-number">06</p><h2>Product takeaway</h2><p>AI was one piece of the outcome. The larger product lesson was that automation, supplier reliability, checkout flexibility, and post-booking fulfilment must work together to earn user trust.</p></section>
-        <section id="tools"><p class="section-number">07</p><h2>Tools and methods</h2><div class="case-tags"><span>Vercel AI SDK</span><span>Supplier APIs</span><span>JusPay</span><span>Product requirements</span><span>Cross-functional delivery</span></div></section>
-      </article>
-      <aside class="case-index"><span>On this page</span><a href="#problem">The problem</a><a href="#discovery">Discovery</a><a href="#role">What I did</a><a href="#solution">What I built</a><a href="#impact">Impact</a><a href="#learning">What I learned</a><a href="#tools">Tools</a></aside>
+<body class="case-study-page">
+  <div class="case-page">
+    <div class="topbar">
+      <a class="back-link" href="../../index.html#work"><span>&larr;</span><span>Back to portfolio</span></a>
+      <div class="top-actions"><a class="btn" href="../../index.html#contact">Contact me</a></div>
     </div>
-  </main>
-  <footer><div class="shell"><span>© 2026 Abhishek Wabale</span><a href="../../index.html">Portfolio home →</a></div></footer>
+
+    <section class="hero">
+      <p class="eyebrow">Case Study 01</p>
+      <h1>AI-powered flight quotes and booking reliability</h1>
+      <p class="hero-copy">A travel-tech product improvement initiative that reduced manual quote effort, improved booking success, clarified baggage information, and made post-booking fulfilment more reliable.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>AI Product</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>Travel APIs</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>Checkout UX</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>40% manual effort reduction</span></div>
+      </div>
+    </section>
+
+    <div class="content-wrap">
+      <main class="content">
+        <section class="section" id="problem">
+          <h2 class="section-title">The problem</h2>
+          <p>Flight quoting and booking had multiple friction points: manual quote creation, supplier response dependencies, unclear baggage information, limited payment flexibility, and avoidable post-booking support requests.</p>
+          <p>The product challenge was not only to add AI. The journey needed to feel dependable from quote generation through checkout and ticket delivery.</p>
+          <div class="facts">
+            <div class="fact"><span>Core issue</span><strong>Manual and fragmented booking operations slowed down the user journey.</strong></div>
+            <div class="fact"><span>Product goal</span><strong>Make the flight booking experience faster, clearer, and more reliable.</strong></div>
+          </div>
+        </section>
+
+        <section class="section" id="discovery">
+          <h2 class="section-title">How I approached it</h2>
+          <p>I looked at the complete booking workflow: how quotes were generated, how supplier responses were handled, where baggage information created uncertainty, and where users needed more flexible payment choices.</p>
+          <p>The opportunity was to combine AI assistance, supplier integration, better fallbacks, and clearer user-facing information into one stronger product flow.</p>
+        </section>
+
+        <blockquote class="pull-quote">Automation creates value only when the underlying booking response is trustworthy.</blockquote>
+
+        <section class="section" id="process">
+          <h2 class="section-title">What I did</h2>
+          <div class="steps">
+            <div class="step"><div class="step-no">01</div><div><h3>Shaped the AI quoting workflow</h3><p>Defined requirements for AI-powered flight quotes using Vercel AI SDK to reduce repetitive manual effort.</p></div></div>
+            <div class="step"><div class="step-no">02</div><div><h3>Improved supplier-backed reliability</h3><p>Coordinated E-Trav supplier API integration and clarified how incomplete responses should be handled.</p></div></div>
+            <div class="step"><div class="step-no">03</div><div><h3>Reduced checkout uncertainty</h3><p>Improved baggage visibility and supported EMI payment integration through JusPay ExpressCheckout.</p></div></div>
+            <div class="step"><div class="step-no">04</div><div><h3>Improved fulfilment</h3><p>Helped automate PDF ticket generation and delivery to reduce avoidable support requests.</p></div></div>
+          </div>
+        </section>
+
+        <section class="section" id="solution">
+          <h2 class="section-title">What was shipped</h2>
+          <p>The final product flow combined AI-assisted quoting, more reliable supplier inventory, better baggage information, EMI payment options, and automated post-booking ticket delivery.</p>
+          <div class="case-gallery">
+            <div class="case-gallery-head">
+              <div><p class="case-gallery-label">Product glimpse</p><p class="case-gallery-title">A structured flight quote and fulfilment workflow.</p></div>
+            </div>
+            <div class="case-gallery-stage">
+              <div class="mock-screen"><div class="hero-block"></div><div class="bar"></div><div class="row"></div><div class="row"></div></div>
+              <div class="case-gallery-caption"><strong>Quote assistant</strong> Structured AI output reduced repeated manual work while keeping the booking flow understandable for operations and users.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="impact">
+          <h2 class="section-title">Impact</h2>
+          <ul class="impact-points">
+            <li>Reduced manual flight-quote effort by 40%.</li>
+            <li>Contributed to a 12% increase in successful bookings.</li>
+            <li>Reduced booking drop-offs by 20% through clearer baggage responses and fallbacks.</li>
+            <li>Contributed to a 15% increase in international bookings through EMI payments.</li>
+            <li>Reduced ticket-PDF support requests by 35%.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="learning">
+          <h2 class="section-title">What I learned</h2>
+          <p>AI was one part of the outcome. The larger product lesson was that automation, supplier reliability, checkout flexibility, and fulfilment must work together to earn user trust.</p>
+        </section>
+
+        <section class="section" id="tools">
+          <h2 class="section-title">Tools and methods</h2>
+          <div class="case-chip-list"><span class="chip">Vercel AI SDK</span><span class="chip">Supplier APIs</span><span class="chip">JusPay</span><span class="chip">PRD</span><span class="chip">Cross-functional delivery</span></div>
+        </section>
+
+        <a class="next-case" href="../transit-alert-lifecycle/"><span>Next case</span><strong>Transit Alert Lifecycle Manager</strong></a>
+      </main>
+
+      <aside class="case-index">
+        <span>On this page</span>
+        <a href="#problem">The problem</a>
+        <a href="#discovery">Approach</a>
+        <a href="#process">What I did</a>
+        <a href="#solution">What shipped</a>
+        <a href="#impact">Impact</a>
+        <a href="#learning">Learnings</a>
+        <a href="#tools">Tools</a>
+      </aside>
+    </div>
+  </div>
 </body>
 </html>
