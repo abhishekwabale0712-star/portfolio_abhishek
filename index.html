@@ -199,10 +199,74 @@
               <div class="case-tools"><span>RICE</span><span>Persona mapping</span><span>OKRs</span><span>Transit UX</span></div>
               <a class="case-link-inline" href="case-studies/transit-alert-lifecycle/">Read full case study <span>→</span></a>
             </div>
-            <div class="product-preview route-map">
+            <div class="product-preview product-carousel transit-glimpse" data-carousel>
               <div class="preview-kicker">Product glimpse</div>
-              <div class="route-art"><span></span><span></span><span></span><span></span></div>
-              <p><strong>Alert lifecycle</strong> Create, monitor, review, update, and close alerts from one queue.</p>
+              <div class="carousel-window">
+                <div class="carousel-track">
+                  <figure class="carousel-slide is-active">
+                    <div class="transit-shot dashboard-shot">
+                      <div class="shot-top"><span>☰</span><strong>Alert Lifecycle Manager</strong></div>
+                      <div class="metrics">
+                        <div><small>Active</small><b>24</b><em>Healthy</em></div>
+                        <div><small>Needs Review</small><b>6</b><em>Priority</em></div>
+                        <div><small>Expiring Today</small><b>8</b><em>Attention</em></div>
+                        <div><small>Outdated</small><b>3</b><em>Action Req.</em></div>
+                      </div>
+                      <div class="wide-metric"><small>Closed (7D)</small><b>18</b><em>Resolved</em></div>
+                      <div class="alert-list">
+                        <strong>Alerts requiring attention <span>10</span></strong>
+                        <i>Search active alerts...</i>
+                        <div class="sort-tabs"><span>Priority</span><span>Last Updated</span><span>End Time</span></div>
+                        <p>Route 14 Express Bus Cancellation <small>14X</small></p>
+                      </div>
+                    </div>
+                    <figcaption><strong>Operations dashboard</strong><span>Priority queue for active, expiring, and outdated alerts.</span></figcaption>
+                  </figure>
+                  <figure class="carousel-slide">
+                    <div class="transit-shot detail-shot">
+                      <small class="pill-blue">Transit operations review</small>
+                      <h4>Route 14 Express Bus Cancellation</h4>
+                      <div class="detail-grid"><span>Alert Reference<br><b>ALERT-014</b></span><span>Severity<br><b>Critical</b></span><span>Rider Impact<br><b>Suspension</b></span></div>
+                      <div class="insight-box"><b>System insight recommended action</b><p>Scheduled end time has passed, but the alert is still active. Review or close it to prevent outdated rider information.</p></div>
+                      <label>Alert details</label>
+                      <div class="detail-card"><span>Impacted Route<br><b>14X</b></span><span>Service Cause<br><b>Maintenance / Fleet Shortage</b></span></div>
+                      <div class="action-stack"><button>Mark as Reviewed</button><button>Extend End Time</button><button>Close Alert</button></div>
+                    </div>
+                    <figcaption><strong>Alert review</strong><span>Clear recommendation and next-best actions for each alert.</span></figcaption>
+                  </figure>
+                  <figure class="carousel-slide">
+                    <div class="transit-shot modal-shot">
+                      <div class="modal-card">
+                        <h4>◷ Extend Alert</h4>
+                        <p><b>Target alert:</b> “Metro Line A Weekend Work”<br><b>Prev End Time:</b> Today 6:00 AM</p>
+                        <div class="form-row"><span>17-06-2026</span><span>18:00</span></div>
+                        <span class="select-line">Ongoing incident / delays continue</span>
+                        <textarea placeholder="Provide context for dispatchers on other shifts..."></textarea>
+                        <div class="modal-actions"><button>Cancel</button><button>Extend Alert</button></div>
+                      </div>
+                    </div>
+                    <figcaption><strong>Extend flow</strong><span>Structured update flow for alerts that remain valid.</span></figcaption>
+                  </figure>
+                  <figure class="carousel-slide">
+                    <div class="transit-shot modal-shot close-modal">
+                      <div class="modal-card">
+                        <h4>ⓘ Close Alert?</h4>
+                        <p>This removes the alert from rider-facing channels after disruption resolution.</p>
+                        <blockquote>Active rider message: “Route 32 is experiencing minor delays near Expressway Exit 4.”</blockquote>
+                        <textarea placeholder="Archival resolution note..."></textarea>
+                        <label><input type="checkbox" checked> Notify dispatch team and service planners</label>
+                        <div class="modal-actions"><button>Cancel</button><button>Close Alert</button></div>
+                      </div>
+                    </div>
+                    <figcaption><strong>Close flow</strong><span>Resolution notes and team notification before closure.</span></figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button type="button" data-carousel-prev aria-label="Previous Transit screenshot">‹</button>
+                <div class="carousel-dots" aria-label="Transit screenshot slides"></div>
+                <button type="button" data-carousel-next aria-label="Next Transit screenshot">›</button>
+              </div>
             </div>
           </article>
 
@@ -218,10 +282,57 @@
               <div class="case-tools"><span>AARRR</span><span>RICE</span><span>Survey</span><span>Retention</span></div>
               <a class="case-link-inline" href="case-studies/good-bug-repeat-purchase/">Read full case study <span>→</span></a>
             </div>
-            <div class="product-preview phone-preview">
+            <div class="product-preview product-carousel goodbug-glimpse" data-carousel>
               <div class="preview-kicker">Product glimpse</div>
-              <div class="phone-art"><b></b><span></span><span></span><span></span></div>
-              <p><strong>Retention flow</strong> Reorder reminders, daily habit tracking, and onboarding support.</p>
+              <div class="carousel-window">
+                <div class="carousel-track">
+                  <figure class="carousel-slide is-active">
+                    <div class="phone-shot goodbug-shot">
+                      <div class="mobile-status">12:24 <span>55%</span></div>
+                      <div class="gb-nav"><b>♡ The <span>Good</span> Bug</b><i>⌕ 🛒 ☰</i></div>
+                      <section class="gb-panel">
+                        <h4>◎ Smart Reorder Nudges</h4>
+                        <p>Would you like a reorder reminder when your pack is about to finish? We'll send it via WhatsApp/email/SMS.</p>
+                        <div class="gb-buttons"><button>✅ Yes, remind me</button><button>❌ Not now</button></div>
+                        <div class="gb-methods"><b>Choose your preferred contact method:</b><span>WhatsApp</span><span>SMS</span><span>Email</span></div>
+                      </section>
+                      <section class="gb-panel payment-panel">
+                        <h4>Payment Method</h4>
+                        <p>◉ Cash on Delivery<br>○ UPI Payment<br>○ Credit/Debit Card</p>
+                      </section>
+                    </div>
+                    <figcaption><strong>Smart reorder nudge</strong><span>Reminder opt-in at the moment of purchase.</span></figcaption>
+                  </figure>
+                  <figure class="carousel-slide">
+                    <div class="phone-shot cart-shot">
+                      <div class="mobile-status">12:39 <span>51%</span></div>
+                      <div class="gb-nav compact"><b>The <span>Good</span> Bug</b><i>🛒 Dashboard</i></div>
+                      <h4>Shopping Cart (2 items)</h4>
+                      <div class="cart-item"><b>Metabolically Lean - Probiotics</b><span>30 Sachets</span><strong>₹1,299</strong><em>Save ₹300</em></div>
+                      <div class="cart-item"><b>Metabolically Lean - AMS</b><span>15 Sachets</span><strong>₹1,199</strong><em>Save ₹100</em></div>
+                      <div class="recommend-box"><b>Complete Your Metabolic Journey</b><p>Add both products for maximum results.</p><button>Add Recommendation</button></div>
+                      <div class="summary-box"><b>Order Summary</b><p>Total Savings <span>-₹400</span></p><strong>Total ₹2,498</strong><button>Proceed to Checkout →</button></div>
+                    </div>
+                    <figcaption><strong>Cart reinforcement</strong><span>Bundle recommendation and savings clarity before checkout.</span></figcaption>
+                  </figure>
+                  <figure class="carousel-slide">
+                    <div class="phone-shot habit-shot">
+                      <div class="mobile-status">12:38 <span>51%</span></div>
+                      <div class="gb-nav"><b>♡ The <span>Good</span> Bug</b><i>⌕ 🛒</i></div>
+                      <h4>Welcome back, Priya! 👋</h4>
+                      <p>You're on day 12 of your health journey. Keep it up!</p>
+                      <div class="running-low"><b>Running Low!</b><span>Only 3 days left in your current pack.</span><button>🛒 Reorder Now</button></div>
+                      <div class="reminders"><h4>🔔 Daily Reminders Active</h4><p>WhatsApp<br><small>Daily at 8:00 AM</small></p><p>Email<br><small>Weekly progress</small></p></div>
+                    </div>
+                    <figcaption><strong>Retention dashboard</strong><span>Running-low reminder and daily habit loop.</span></figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button type="button" data-carousel-prev aria-label="Previous Good Bug screenshot">‹</button>
+                <div class="carousel-dots" aria-label="Good Bug screenshot slides"></div>
+                <button type="button" data-carousel-next aria-label="Next Good Bug screenshot">›</button>
+              </div>
             </div>
           </article>
 

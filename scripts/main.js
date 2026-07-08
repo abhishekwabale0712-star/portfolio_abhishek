@@ -99,6 +99,41 @@ function applyCaseFilter(filter) {
 document.querySelectorAll('[data-filter]').forEach((button) => {
   button.addEventListener('click', () => applyCaseFilter(button.dataset.filter));
 });
+
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+  const dotsWrap = carousel.querySelector('.carousel-dots');
+  const prev = carousel.querySelector('[data-carousel-prev]');
+  const next = carousel.querySelector('[data-carousel-next]');
+  let current = Math.max(0, slides.findIndex((slide) => slide.classList.contains('is-active')));
+
+  if (!slides.length || !dotsWrap) return;
+
+  const dots = slides.map((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Show product screenshot ${index + 1}`);
+    dot.addEventListener('click', () => showSlide(index));
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function showSlide(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('is-active', slideIndex === current);
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === current);
+      dot.setAttribute('aria-current', dotIndex === current ? 'true' : 'false');
+    });
+  }
+
+  prev?.addEventListener('click', () => showSlide(current - 1));
+  next?.addEventListener('click', () => showSlide(current + 1));
+  showSlide(current);
+});
+
 document.querySelectorAll('[data-approach]').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-approach]').forEach((item) => item.classList.toggle('active', item === button));
