@@ -1,0 +1,221 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2416 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+14 TL
+/F1 18 Tf
+(Transit Alert Lifecycle Manager) Tj
+T*
+/F1 11 Tf
+(Abhishek Wabale - Product Case Study) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(CONTEXT) Tj
+T*
+/F1 11 Tf
+(- Transit agencies manage critical information such as service alerts, routes, schedules,) Tj
+T*
+(  stops, and disruptions.) Tj
+T*
+(- Riders depend on timely and reliable service information to plan trips and avoid) Tj
+T*
+(  surprises.) Tj
+T*
+(- The product opportunity is to help agencies maintain alert quality throughout the full) Tj
+T*
+(  lifecycle, not just create alerts faster.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(PROBLEM) Tj
+T*
+/F1 11 Tf
+(- Transit agencies experience operational complexity when managing service alerts) Tj
+T*
+(  manually.) Tj
+T*
+(- The alert lifecycle - creation, publishing, monitoring, updating, extending, and closing) Tj
+T*
+(  - depends heavily on staff follow-up.) Tj
+T*
+(- As alert volume grows, teams can miss alerts that need review, alerts nearing) Tj
+T*
+(  expiration, or alerts that should already be closed.) Tj
+T*
+(- Outdated rider-facing information can reduce trust and create confusion for daily) Tj
+T*
+(  commuters.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(USERS) Tj
+T*
+/F1 11 Tf
+(- Agency communications officer: creates and updates alerts under time pressure and is) Tj
+T*
+(  accountable for accuracy.) Tj
+T*
+(- Daily rider: checks transit information before leaving and expects the service status to) Tj
+T*
+(  be current.) Tj
+T*
+(- Account manager: supports agencies after onboarding and needs the product to be simple) Tj
+T*
+(  and scalable.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(WHY THIS FEATURE WON) Tj
+T*
+/F1 11 Tf
+(- Alert Lifecycle Manager ranked highest in RICE because it directly solves the core) Tj
+T*
+(  lifecycle maintenance problem.) Tj
+T*
+(- It scored higher than an AI alert-writing assistant because the main issue was not only) Tj
+T*
+(  creating alerts; it was keeping already-published alerts accurate.) Tj
+T*
+(- It scored higher than an insights dashboard because it gives staff an action queue, not) Tj
+T*
+(  only reporting.) Tj
+T*
+(- The feature helps staff identify which alerts require review, update, extension, or) Tj
+T*
+(  closure before riders encounter stale information.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(SOLUTION) Tj
+T*
+/F1 11 Tf
+(- The feature provides a centralized review queue for active alerts.) Tj
+T*
+(- It highlights alerts that are healthy, need review, are expiring soon, or may be) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 1895 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+14 TL
+(  outdated.) Tj
+T*
+(- Staff can quickly review, update, extend, or close alerts from one workflow.) Tj
+T*
+(- The experience reduces manual monitoring and improves rider-facing information quality.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(SUCCESS METRICS) Tj
+T*
+/F1 11 Tf
+(- North Star Metric: percentage of active alerts that remain accurate and up to date) Tj
+T*
+(  throughout their lifecycle.) Tj
+T*
+(- Initiative Metric: percentage of alerts reviewed, updated, or closed before becoming) Tj
+T*
+(  outdated.) Tj
+T*
+(- Reduce outdated active alerts by 50%.) Tj
+T*
+(- Increase alerts reviewed before expiration from 40% to 80%.) Tj
+T*
+(- Reduce rider complaints related to inaccurate service alerts.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(IMPACT) Tj
+T*
+/F1 11 Tf
+(- Improves information accuracy by surfacing alerts requiring attention.) Tj
+T*
+(- Improves operational efficiency by reducing manual monitoring effort.) Tj
+T*
+(- Improves scalability as alert volume grows.) Tj
+T*
+(- Improves rider experience by keeping service information current and trustworthy.) Tj
+T*
+(- Expands product value from alert creation to alert quality management.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(ROLLOUT) Tj
+T*
+/F1 11 Tf
+(- Pilot with 2-3 existing transit agencies and monitor alert review rates.) Tj
+T*
+(- Move to general availability with onboarding guides and product walkthroughs.) Tj
+T*
+(- Optimize with smart recommendations, alert analytics, collaboration workflows, and) Tj
+T*
+(  expanded reporting.) Tj
+T*
+() Tj
+T*
+/F1 13 Tf
+(WHAT I LEARNED) Tj
+T*
+/F1 11 Tf
+(- The highest-impact opportunity is not always the most visible feature.) Tj
+T*
+(- Activity metrics such as number of alerts created are weaker than outcome metrics such) Tj
+T*
+(  as lifecycle accuracy.) Tj
+T*
+(- A strong operational product should reduce hidden manual work while improving the user-) Tj
+T*
+(  facing experience.) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000002547 00000 n 
+0000004494 00000 n 
+0000004620 00000 n 
+0000004746 00000 n 
+0000004809 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+4858
+%%EOF
