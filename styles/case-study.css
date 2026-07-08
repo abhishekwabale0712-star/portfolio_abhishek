@@ -41,12 +41,15 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   padding: 10px 18px;
   border-radius: 999px;
   background: var(--ink);
   color: #fff;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
 }
 .hero {
   padding: 70px 0 60px;
@@ -90,18 +93,21 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(126, 164, 148, .35);
   border-radius: 999px;
-  padding: 7px 12px;
-  background: rgba(255,255,255,.62);
-  color: var(--muted);
-  font-size: 12px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,.84);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(45, 41, 38, .04);
 }
 .hero-meta-dot {
-  width: 7px;
-  height: 7px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--sage);
+  flex: 0 0 auto;
 }
 .content-wrap {
   display: grid;
@@ -254,6 +260,53 @@ a { color: inherit; text-decoration: none; }
   color: var(--sage);
   font-weight: 800;
 }
+.metric-card-list {
+  display: grid;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+.metric-card-list li {
+  position: relative;
+  display: grid;
+  gap: 7px;
+  padding: 20px 22px 20px 48px;
+  border: 1px solid rgba(126, 164, 148, .25);
+  border-radius: 20px;
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 14px 36px rgba(45, 41, 38, .06);
+}
+.metric-card-list li::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 29px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--sage);
+  box-shadow: 0 0 0 7px rgba(126, 164, 148, .12);
+}
+.metric-card-list strong {
+  color: var(--ink);
+  font-size: 19px;
+}
+.metric-card-list span {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.metric-card-list em {
+  justify-self: start;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: #eef5f1;
+  color: var(--sage);
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+}
 .two-col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -296,7 +349,19 @@ a { color: inherit; text-decoration: none; }
 .case-chip-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 12px;
+}
+.case-chip-list .chip {
+  padding: 11px 18px;
+  border-color: rgba(45,41,38,.13);
+  font-size: 15px;
+}
+.case-chip-list .chip::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sage);
 }
 .pdf-card {
   display: flex;
