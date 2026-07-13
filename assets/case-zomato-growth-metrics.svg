@@ -1,0 +1,38 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Food delivery growth analytics dashboard</title>
+  <desc id="desc">A visual dashboard for food-delivery growth showing discovery, checkout, delivery confidence, and repeat-order metrics.</desc>
+  <rect width="1200" height="760" rx="42" fill="#FFF7F1"/>
+  <circle cx="236" cy="210" r="210" fill="#FFE5E0"/>
+  <circle cx="940" cy="588" r="260" fill="#F4E7D2"/>
+  <rect x="88" y="70" width="1024" height="620" rx="36" fill="white" stroke="#E2D4C6" stroke-width="2"/>
+  <text x="132" y="124" fill="#221E1B" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Zomato growth command center</text>
+  <rect x="132" y="162" width="320" height="460" rx="30" fill="#221E1B"/>
+  <text x="168" y="216" fill="#FF6B5C" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="2">FUNNEL VIEW</text>
+  <rect x="168" y="258" width="248" height="48" rx="14" fill="#FFF7F1"/>
+  <rect x="168" y="324" width="212" height="48" rx="14" fill="#FFE5E0"/>
+  <rect x="168" y="390" width="176" height="48" rx="14" fill="#FFC9BF"/>
+  <rect x="168" y="456" width="138" height="48" rx="14" fill="#FF8979"/>
+  <rect x="168" y="522" width="106" height="48" rx="14" fill="#FF6B5C"/>
+  <text x="188" y="289" fill="#221E1B" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Search success</text>
+  <text x="188" y="355" fill="#221E1B" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Menu engagement</text>
+  <text x="188" y="421" fill="#221E1B" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Cart build</text>
+  <text x="188" y="487" fill="white" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Checkout</text>
+  <text x="188" y="553" fill="white" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Repeat</text>
+  <rect x="500" y="162" width="252" height="178" rx="28" fill="#F8FBF9" stroke="#D9E6DE"/>
+  <text x="530" y="210" fill="#758A9A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">ETA TRUST</text>
+  <path d="M540 292c42-70 78-40 122-92 24 42 44 58 66 70" stroke="#7DA191" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="662" cy="200" r="12" fill="#FF6B5C"/>
+  <rect x="792" y="162" width="252" height="178" rx="28" fill="#FFF8E9" stroke="#F0DDB6"/>
+  <text x="822" y="210" fill="#758A9A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">REPEAT ORDERS</text>
+  <circle cx="918" cy="270" r="48" fill="#F1B84B"/>
+  <path d="M894 270h48m-24-24v48" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <rect x="500" y="382" width="544" height="240" rx="30" fill="#FBFAF7" stroke="#E0D6C9"/>
+  <text x="532" y="430" fill="#221E1B" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Experience signals that drive growth</text>
+  <line x1="532" y1="468" x2="1008" y2="468" stroke="#E8DFD4"/>
+  <circle cx="560" cy="512" r="15" fill="#FF6B5C"/>
+  <text x="590" y="520" fill="#514942" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700">Price clarity before checkout</text>
+  <circle cx="560" cy="564" r="15" fill="#7DA191"/>
+  <text x="590" y="572" fill="#514942" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700">Reliable delivery promise and alerts</text>
+  <circle cx="560" cy="616" r="15" fill="#F1B84B"/>
+  <text x="590" y="624" fill="#514942" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700">Faster reorder paths for favourites</text>
+</svg>
