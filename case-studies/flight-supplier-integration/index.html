@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight Supplier Integration - Abhishek Wabale</title>
+  <meta name="description" content="A product case study on integrating E Trav and AkbarTravels suppliers to improve flight data accuracy and booking reliability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/case-study.css">
+</head>
+<body class="case-study-page">
+  <div class="case-page">
+    <div class="topbar">
+      <a class="back-link" href="../../index.html#work"><span>&larr;</span><span>Back to portfolio</span></a>
+      <div class="top-actions"><a class="btn" href="../../index.html#contact">Contact me</a></div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Case Study</p>
+      <h1>Flight Supplier Integration: E Trav and AkbarTravels</h1>
+      <p class="hero-copy">A travel-tech product case study on improving flight inventory reliability and reducing inaccurate supplier data by integrating two new suppliers into the booking ecosystem.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>Travel APIs</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>E Trav</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>AkbarTravels</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>~12% booking lift</span></div>
+      </div>
+    </section>
+
+    <div class="content-wrap">
+      <main class="content">
+        <section class="section" id="context">
+          <h2 class="section-title">Context</h2>
+          <p>Flight booking reliability depends heavily on supplier data quality. If a supplier returns inaccurate information around timings, meals, fare rules, baggage, availability, or pricing, the user experience breaks and internal teams face avoidable support pressure.</p>
+          <p>Travelxp decided to integrate two additional flight suppliers, E Trav and AkbarTravels, to improve inventory coverage, reduce dependency on previous suppliers, and make booking responses more reliable.</p>
+          <div class="facts">
+            <div class="fact"><span>Product area</span><strong>Flight booking supplier APIs and internal CMS/booking operations workflow.</strong></div>
+            <div class="fact"><span>Primary goal</span><strong>Improve flight data accuracy, supplier coverage, fallback reliability, and booking success.</strong></div>
+          </div>
+        </section>
+
+        <section class="section" id="problem">
+          <h2 class="section-title">The problem</h2>
+          <p>The previous supplier setup created repeated accuracy and reliability issues. Internal teams observed mismatches in meals, flight timings, fare details, availability, and booking confirmations. These issues created uncertainty for users and increased operational effort for support and booking teams.</p>
+          <p>The product challenge was to integrate new suppliers without making the booking flow more complex. The system needed to normalize different supplier responses, compare data quality, handle fallbacks, and expose clean information to users and internal teams.</p>
+          <div class="two-col">
+            <div class="impact-box"><span>Data inaccuracy</span><p>Meals, timings, fare rules, baggage, and availability could differ between supplier response and expected booking information.</p></div>
+            <div class="impact-box"><span>Operational pressure</span><p>Support and booking teams had to manually verify cases when supplier data looked unreliable.</p></div>
+            <div class="impact-box"><span>Inventory limitation</span><p>Relying on fewer suppliers limited coverage and reduced flexibility for routing, pricing, and fallback decisions.</p></div>
+            <div class="impact-box"><span>User trust risk</span><p>Incorrect flight details can directly reduce booking confidence and increase post-booking complaints.</p></div>
+          </div>
+        </section>
+
+        <section class="section" id="role">
+          <h2 class="section-title">My role</h2>
+          <ul class="impact-points">
+            <li>Owned the product flow for integrating E Trav and AkbarTravels into the flight booking ecosystem.</li>
+            <li>Mapped supplier response fields and defined how the system should normalize fares, timings, meals, baggage, fare rules, and booking statuses.</li>
+            <li>Designed fallback logic for cases where one supplier response was incomplete, delayed, inaccurate, or unavailable.</li>
+            <li>Defined CMS/internal visibility requirements so teams could understand which supplier powered a quote or booking.</li>
+            <li>Worked with engineering, QA, and operations to test supplier responses, edge cases, booking states, and failure scenarios.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="solution">
+          <h2 class="section-title">Solution design</h2>
+          <p>The integration strategy focused on more than connecting APIs. It required a product layer that could convert different supplier formats into one reliable booking experience.</p>
+          <div class="steps">
+            <div class="step"><div class="step-no">01</div><div><h3>Supplier response mapping</h3><p>Mapped E Trav and AkbarTravels response fields against existing booking, fare, availability, baggage, meals, and timing data structures.</p></div></div>
+            <div class="step"><div class="step-no">02</div><div><h3>Normalized booking flow</h3><p>Defined how supplier-specific data should appear consistently to users and internal teams, regardless of which supplier powered the result.</p></div></div>
+            <div class="step"><div class="step-no">03</div><div><h3>Fallback and error handling</h3><p>Designed fallback rules for incomplete data, unavailable inventory, fare mismatch, supplier timeout, failed booking, and confirmation delays.</p></div></div>
+            <div class="step"><div class="step-no">04</div><div><h3>CMS visibility</h3><p>Added internal visibility so teams could see supplier source, booking status, fare response, and exception reason when support action was needed.</p></div></div>
+            <div class="step"><div class="step-no">05</div><div><h3>QA and monitoring</h3><p>Defined test cases around meals, timing accuracy, fare rules, baggage display, booking confirmation, cancellation behavior, and refund dependency.</p></div></div>
+          </div>
+        </section>
+
+        <blockquote class="pull-quote">The integration was not just an API task. It was a reliability product: cleaner data, better fallback logic, and more confidence for users and internal teams.</blockquote>
+
+        <section class="section" id="impact">
+          <h2 class="section-title">Impact</h2>
+          <ul class="impact-points">
+            <li>Improved supplier coverage by approximately 20% by adding E Trav and AkbarTravels as additional inventory sources.</li>
+            <li>Reduced inaccurate flight-detail incidents by approximately 35% through supplier validation, response normalization, and QA checks.</li>
+            <li>Contributed to approximately 12% increase in successful bookings by improving availability and fallback reliability.</li>
+            <li>Reduced manual verification effort for booking/support teams by approximately 30% through clearer supplier source and error visibility.</li>
+            <li>Improved user confidence by reducing mismatches around meals, timings, fare rules, and booking confirmation details.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="metrics">
+          <h2 class="section-title">Success metrics</h2>
+          <ul class="metric-card-list">
+            <li><strong>Supplier coverage</strong><span>Increase in available flight options through additional supplier inventory.</span><em>Target: +20%</em></li>
+            <li><strong>Successful booking rate</strong><span>Bookings completed without supplier failure, fare mismatch, or confirmation issue.</span><em>Target: +12%</em></li>
+            <li><strong>Data accuracy incidents</strong><span>Issues related to meals, timings, fare rules, baggage, or availability mismatch.</span><em>Target: -35%</em></li>
+            <li><strong>Manual verification effort</strong><span>Cases requiring internal team checks because supplier data looked unreliable.</span><em>Target: -30%</em></li>
+          </ul>
+        </section>
+
+        <section class="section" id="learning">
+          <h2 class="section-title">What I learned</h2>
+          <p>Supplier integration succeeds when product, engineering, QA, and operations share the same definition of reliability. A supplier can return data, but the product must decide how to validate it, explain it, recover from it, and make it usable for people.</p>
+        </section>
+
+        <section class="section" id="tools">
+          <h2 class="section-title">Tools and methods</h2>
+          <div class="case-chip-list"><span class="chip">Supplier APIs</span><span class="chip">E Trav</span><span class="chip">AkbarTravels</span><span class="chip">Fallback logic</span><span class="chip">QA test cases</span><span class="chip">CMS visibility</span></div>
+        </section>
+
+        <a class="next-case" href="../project-one/"><span>Next case</span><strong>AI-powered flight quotes</strong></a>
+      </main>
+
+      <aside class="case-index">
+        <span>On this page</span>
+        <a href="#context">Context</a>
+        <a href="#problem">Problem</a>
+        <a href="#role">My role</a>
+        <a href="#solution">Solution</a>
+        <a href="#impact">Impact</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#learning">Learnings</a>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

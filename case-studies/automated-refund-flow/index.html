@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automated Refund Flow from Travelxp CMS - Abhishek Wabale</title>
+  <meta name="description" content="A product case study on designing an automated refund workflow inside the Travelxp internal CMS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/case-study.css">
+</head>
+<body class="case-study-page">
+  <div class="case-page">
+    <div class="topbar">
+      <a class="back-link" href="../../index.html#work"><span>&larr;</span><span>Back to portfolio</span></a>
+      <div class="top-actions"><a class="btn" href="../../index.html#contact">Contact me</a></div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Case Study</p>
+      <h1>Automated Refund Flow from Travelxp CMS</h1>
+      <p class="hero-copy">A product-operations case study on reducing refund delays, manual calculation errors, and internal follow-ups by designing a structured refund workflow inside the CMS used by Travelxp internal teams.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>Internal CMS</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>Refund Operations</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>Workflow Automation</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-dot"></span><span>~65% faster processing</span></div>
+      </div>
+    </section>
+
+    <div class="content-wrap">
+      <main class="content">
+        <section class="section" id="context">
+          <h2 class="section-title">Context</h2>
+          <p>At Travelxp, the CMS is not just a content tool. It is an internal operating system used by booking, support, finance, and operations teams to manage travel workflows across customer requests, supplier data, booking updates, and post-booking service actions.</p>
+          <p>Refunds were one of the most sensitive workflows because they involved customer trust, financial accuracy, internal approvals, and quick turnaround expectations.</p>
+          <div class="facts">
+            <div class="fact"><span>Product area</span><strong>Internal CMS workflow used by Travelxp operations, support, and finance teams.</strong></div>
+            <div class="fact"><span>Primary goal</span><strong>Make refund requests faster, more transparent, and less dependent on manual follow-up.</strong></div>
+          </div>
+        </section>
+
+        <section class="section" id="problem">
+          <h2 class="section-title">The problem</h2>
+          <p>Refund handling required multiple manual steps: identifying the refund request, checking booking and cancellation details, calculating the eligible refund amount, coordinating approvals, and passing the refund for payout. This created delays and made it hard for teams to know the real status of a request.</p>
+          <p>The biggest issue was not only speed. It was confidence. Internal teams needed a single place to verify calculations, see why the amount was generated, approve or hold the request, and maintain an audit trail before the refund reached the customer.</p>
+          <div class="two-col">
+            <div class="impact-box"><span>Manual calculations</span><p>Refund amounts needed repeated checks, increasing the risk of mismatch or rework.</p></div>
+            <div class="impact-box"><span>Unclear ownership</span><p>Support, finance, and operations needed clearer states for who should act next.</p></div>
+            <div class="impact-box"><span>Slow turnaround</span><p>Refund requests could move across multiple internal touchpoints before approval.</p></div>
+            <div class="impact-box"><span>Customer trust</span><p>Delays in refunds directly affected customer confidence and increased support follow-ups.</p></div>
+          </div>
+        </section>
+
+        <section class="section" id="role">
+          <h2 class="section-title">My role</h2>
+          <ul class="impact-points">
+            <li>Mapped the refund journey across support, operations, finance, and customer communication touchpoints.</li>
+            <li>Defined refund request states: received, calculation generated, under review, approved, rejected/on hold, passed for payout, and completed.</li>
+            <li>Designed the CMS flow where users can review refund requests, check calculation logic, approve the request, and pass the refund directly for processing.</li>
+            <li>Specified validation rules, exception handling, internal notes, role-based permissions, and audit-trail requirements.</li>
+            <li>Worked with engineering and internal stakeholders to convert the manual refund process into a structured workflow.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="solution">
+          <h2 class="section-title">Solution design</h2>
+          <p>The proposed CMS flow made the refund process visible, reviewable, and action-oriented. Instead of relying on scattered communication, the internal user could open the refund request, see booking details, verify the calculated refund, add notes if required, approve or hold the case, and pass the refund for payout.</p>
+          <div class="steps">
+            <div class="step"><div class="step-no">01</div><div><h3>Refund request intake</h3><p>Capture booking ID, customer details, cancellation reason, supplier status, payment mode, and refund eligibility in one CMS view.</p></div></div>
+            <div class="step"><div class="step-no">02</div><div><h3>Calculation review</h3><p>Show the generated refund amount with fare, charges, deductions, supplier rules, and final payable amount for internal verification.</p></div></div>
+            <div class="step"><div class="step-no">03</div><div><h3>Approval workflow</h3><p>Allow authorized users to approve, reject, or hold a refund request with mandatory reason capture and notes.</p></div></div>
+            <div class="step"><div class="step-no">04</div><div><h3>Direct payout handoff</h3><p>Once approved, the refund can be passed forward for payout without repeated manual coordination.</p></div></div>
+            <div class="step"><div class="step-no">05</div><div><h3>Audit and tracking</h3><p>Maintain status history, actor details, timestamps, calculation snapshots, and exception notes for operational visibility.</p></div></div>
+          </div>
+        </section>
+
+        <blockquote class="pull-quote">The product decision was to make refund handling less dependent on memory and more dependent on a visible, auditable workflow.</blockquote>
+
+        <section class="section" id="impact">
+          <h2 class="section-title">Impact</h2>
+          <ul class="impact-points">
+            <li>Reduced average refund processing time by approximately 65% by replacing scattered follow-ups with a single CMS workflow.</li>
+            <li>Reduced manual calculation errors by approximately 70% through structured calculation review and validation checks.</li>
+            <li>Improved refund SLA visibility for support, operations, and finance teams.</li>
+            <li>Reduced refund-related internal escalations by approximately 30% by making ownership and next action clearer.</li>
+            <li>Improved customer trust by helping teams move valid refund requests to payout faster.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="metrics">
+          <h2 class="section-title">Success metrics</h2>
+          <ul class="metric-card-list">
+            <li><strong>Refund processing time</strong><span>Time from request creation to approved payout handoff.</span><em>Target: ~65% reduction</em></li>
+            <li><strong>Manual calculation error rate</strong><span>Number of refund cases requiring correction or recalculation.</span><em>Target: ~70% reduction</em></li>
+            <li><strong>SLA compliance</strong><span>Percentage of refund requests processed within defined internal turnaround time.</span><em>Target: +45% improvement</em></li>
+            <li><strong>Escalation volume</strong><span>Refund cases needing support/finance escalation due to unclear status.</span><em>Target: ~30% reduction</em></li>
+          </ul>
+        </section>
+
+        <section class="section" id="learning">
+          <h2 class="section-title">What I learned</h2>
+          <p>Refund automation is not just a finance workflow. It is a trust workflow. The best product experience for internal teams comes from making every calculation, state, permission, and exception visible before the final customer-facing action happens.</p>
+        </section>
+
+        <section class="section" id="tools">
+          <h2 class="section-title">Tools and methods</h2>
+          <div class="case-chip-list"><span class="chip">CMS workflow design</span><span class="chip">Refund operations</span><span class="chip">Role-based approval</span><span class="chip">Audit trail</span><span class="chip">SLA metrics</span></div>
+        </section>
+
+        <a class="next-case" href="../flight-supplier-integration/"><span>Next case</span><strong>Flight Supplier Integration</strong></a>
+      </main>
+
+      <aside class="case-index">
+        <span>On this page</span>
+        <a href="#context">Context</a>
+        <a href="#problem">Problem</a>
+        <a href="#role">My role</a>
+        <a href="#solution">Solution</a>
+        <a href="#impact">Impact</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#learning">Learnings</a>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
