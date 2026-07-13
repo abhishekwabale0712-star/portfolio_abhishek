@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title">
+  <title id="title">Systems and automation illustration</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eee2cb"/>
+      <stop offset="1" stop-color="#e8f1ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="220" rx="28" fill="url(#bg)"/>
+  <rect x="52" y="42" width="256" height="136" rx="26" fill="none" stroke="#cfc7ba" stroke-width="2" stroke-dasharray="7 7"/>
+  <rect x="74" y="68" width="48" height="48" rx="14" fill="#fffdfa"/>
+  <rect x="238" y="68" width="48" height="48" rx="14" fill="#fffdfa"/>
+  <rect x="86" y="136" width="48" height="48" rx="14" fill="#fffdfa"/>
+  <path d="M171 54h46l-31 57h41l-82 92 23-70h-43l46-79z" fill="#ff814c"/>
+  <path d="M122 92h58M212 92h26M134 160h66" stroke="#b5c8c0" stroke-width="6" stroke-linecap="round"/>
+</svg>

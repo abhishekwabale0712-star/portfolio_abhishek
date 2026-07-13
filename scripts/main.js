@@ -200,7 +200,7 @@ function animateCursor() {
 }
 animateCursor();
 
-document.querySelectorAll('a, button, .album-card, .case-card').forEach((item) => {
+document.querySelectorAll('a, button, .case-card').forEach((item) => {
   item.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
   item.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
 });
@@ -214,38 +214,6 @@ document.querySelectorAll('.magnetic').forEach((item) => {
   });
   item.addEventListener('mouseleave', () => {
     item.style.transform = '';
-  });
-});
-
-document.querySelectorAll('.album-card').forEach((card) => {
-  let dragging = false;
-  let startX = 0;
-  let startY = 0;
-  let left = 0;
-  let top = 0;
-
-  card.addEventListener('pointerdown', (event) => {
-    dragging = true;
-    card.setPointerCapture(event.pointerId);
-    const rect = card.getBoundingClientRect();
-    const parent = card.offsetParent.getBoundingClientRect();
-    startX = event.clientX;
-    startY = event.clientY;
-    left = rect.left - parent.left;
-    top = rect.top - parent.top;
-    card.style.transform = 'rotate(0deg) scale(1.02)';
-    card.style.zIndex = '10';
-  });
-
-  card.addEventListener('pointermove', (event) => {
-    if (!dragging) return;
-    card.style.left = `${left + event.clientX - startX}px`;
-    card.style.top = `${top + event.clientY - startY}px`;
-  });
-
-  card.addEventListener('pointerup', () => {
-    dragging = false;
-    card.style.zIndex = '';
   });
 });
 
