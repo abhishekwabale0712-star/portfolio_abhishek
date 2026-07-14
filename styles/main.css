@@ -360,17 +360,31 @@ body.cursor-hover #cursor-ring { width: 50px; height: 50px; border-color: rgba(1
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 14px;
   padding-top: 26px;
   margin-top: 32px;
   border-top: 1px solid var(--line);
 }
+.stats div {
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255,255,255,.86), rgba(238,245,241,.66));
+  box-shadow: 0 16px 35px rgba(45, 41, 38, .06);
+}
 .stats strong {
   display: block;
   color: var(--sage);
-  font: 400 36px var(--serif);
+  margin-bottom: 16px;
+  font: 400 28px/1.02 var(--serif);
+  letter-spacing: -.03em;
 }
-.stats span { color: var(--muted); font-size: 12px; }
+.stats span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
