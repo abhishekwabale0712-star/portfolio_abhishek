@@ -388,35 +388,125 @@ body.cursor-hover #cursor-ring { width: 50px; height: 50px; border-color: rgba(1
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 20px;
 }
 .capability {
   position: relative;
-  min-height: 245px;
-  padding: 25px;
-  border: 1px solid var(--line);
-  border-radius: 22px;
+  min-height: 330px;
+  padding: 38px;
+  border: 1px solid rgba(226, 217, 206, .96);
+  border-radius: 34px;
   background: rgba(255,255,255,.64);
-  transition: .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   overflow: hidden;
+  box-shadow: 0 18px 45px rgba(45, 41, 38, .055);
+  display: flex;
+  flex-direction: column;
 }
 .capability::after {
   content: attr(data-num);
   position: absolute;
-  top: 18px;
-  right: 20px;
-  color: rgba(45, 41, 38, .16);
-  font: italic 34px var(--serif);
+  top: 26px;
+  right: 30px;
+  color: rgba(45, 41, 38, .13);
+  font: italic 54px/1 var(--serif);
 }
-.capability:hover { transform: translateY(-5px); box-shadow: 0 18px 45px rgba(45, 41, 38, .08); }
-.capability.sage { background: #eef5f1; }
-.capability.rose { background: #f8ebe6; }
-.capability.sand { background: #f8f0df; }
-.capability.lavender { background: #f0ebf5; }
-.cap-icon { font-size: 28px; color: var(--sage-dark); }
-.capability h3 { margin: 34px 0 8px; font-size: 19px; }
-.capability p { color: var(--muted); font-size: 14px; }
-.mini-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.capability::before {
+  content: "";
+  position: absolute;
+  inset: auto 24px 22px auto;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.38);
+  filter: blur(2px);
+}
+.capability:hover {
+  transform: translateY(-7px);
+  border-color: rgba(120, 152, 138, .28);
+  box-shadow: 0 28px 60px rgba(45, 41, 38, .105);
+}
+.capability.sage { background: linear-gradient(145deg, #eef7f2, #e7f1ec); }
+.capability.rose { background: linear-gradient(145deg, #faeee9, #f7e5de); }
+.capability.sand { background: linear-gradient(145deg, #fbf2df, #f6ead2); }
+.capability.lavender { background: linear-gradient(145deg, #f2edf7, #ebe4f2); }
+.cap-icon {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 74px;
+  color: transparent;
+  font-size: 0;
+  flex: 0 0 auto;
+}
+.capability.sage .cap-icon {
+  background:
+    linear-gradient(var(--sage-dark), var(--sage-dark)) 0 0 / 4px 100%,
+    linear-gradient(var(--sage-dark), var(--sage-dark)) 50% 0 / 4px 100%,
+    linear-gradient(var(--sage-dark), var(--sage-dark)) 100% 0 / 4px 100%,
+    linear-gradient(90deg, var(--sage-dark), var(--sage-dark)) 0 0 / 100% 4px,
+    linear-gradient(90deg, var(--sage-dark), var(--sage-dark)) 0 50% / 100% 4px,
+    linear-gradient(90deg, var(--sage-dark), var(--sage-dark)) 0 100% / 100% 4px;
+  background-repeat: no-repeat;
+}
+.capability.rose .cap-icon {
+  width: 22px;
+  height: 22px;
+  border: 3px dotted var(--sage-dark);
+  border-radius: 50%;
+}
+.capability.sand .cap-icon::before,
+.capability.sand .cap-icon::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 4px;
+  width: 7px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--sage-dark);
+}
+.capability.sand .cap-icon::after {
+  transform: rotate(90deg);
+}
+.capability.lavender .cap-icon::before,
+.capability.lavender .cap-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--sage-dark);
+  transform: rotate(25deg);
+}
+.capability.lavender .cap-icon::before {
+  top: 12px;
+  left: 2px;
+}
+.capability.lavender .cap-icon::after {
+  top: 20px;
+  left: 18px;
+}
+.capability h3 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: 27px;
+  line-height: 1.24;
+  letter-spacing: -.035em;
+}
+.capability p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.58;
+  margin-bottom: 28px;
+}
+.mini-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+.capability .mini-tags span {
+  padding: 9px 15px;
+  background: rgba(255,255,255,.6);
+  box-shadow: 0 8px 18px rgba(45, 41, 38, .035);
+  font-size: 14px;
+}
 
 .work-section { background: #f1eee8; }
 .approach-grid {
